@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+화면 왼쪽에서 오른쪽으로 액티비티가 들어오는 효과
+-->
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromXDelta="-100%"
+    android:toXDelta="0%"
+    android:duration="400"
+    android:interpolator="@android:anim/accelerate_interpolator">
+</translate>

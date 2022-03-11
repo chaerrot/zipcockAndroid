@@ -1,0 +1,111 @@
+
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- jQuery -->
+    <script defer type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <!-- iamport.payment.js -->
+    <script defer type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
+
+    <style type="text/css">
+        html, body, button {
+            font-family: 'Nanum Gothic';
+        }
+
+        button {
+            /* background-color: #888; */
+            color: #fff;
+            padding: 1rem 2rem;
+            height: 5rem;
+            font-size: 2rem;
+        }
+
+        #dataList {
+            display: none;
+            height: 120px;
+            overflow: auto;
+            left: 0;
+        }
+
+        #scrolldatalist {
+            display: none;
+            height: 80px;
+            overflow: auto;
+        }
+
+        #dataList option, #scrolldatalist option {
+            cursor: pointer;
+        }
+
+
+        #dataList.show, #scrolldatalist.show {
+            display: block;
+        }
+
+        /* .imp-dialog.mobile .imp-header {
+          top: env(safe-area-inset-top);
+          top: constant(safe-area-inset-top);
+        } */
+    </style>
+</head>
+<body>
+
+<h1 id="header-value"></h1>
+
+<button onclick="onClickPayment()">결제하기</button>
+<button onclick="onClickCertification()">본인인증하기</button>
+
+<script type="text/javascript">
+
+          const userCode = 'iamport'
+          document.addEventListener('DOMContentLoaded', () => {
+                  IMP.init(userCode); // 초기화
+            });
+
+            // 결제
+            function onClickPayment() {
+                const data = {
+                      pg: 'html5_inicis',
+                      pay_method : 'card',
+                      niceMobileV2: true,
+                      amount: '1000',
+                      merchant_uid: `mid_${new Date().getTime()}`,
+                      name: '테스트',
+                      buyer_name: '홍길동',
+                      buyer_email: 'example@example.com',
+                      buyer_addr: '신사동 661-16',
+                      buyer_postcode: '06018',
+                      m_redirect_url: 'https://www.iamport.kr?orderId=order_uid_123456789#result',
+//                      m_redirect_url: 'https://httpstat.us/200',
+                  }
+
+                  IMP.request_pay(data, function(response) {
+                    console.log(response);
+                    alert(JSON.stringify(response))
+                  });
+            }
+
+            // 본인인증
+            function onClickCertification() {
+                const data = {
+                  merchant_uid: `mid_${new Date().getTime()}`,
+                  // birth: '19921010',
+                  carrier: '',
+                  name: '',
+                  phone: '',
+                  company: '아임포트',
+                  }
+
+                IMP.certification(data, function(response) {
+                  console.log(response);
+                  alert(JSON.stringify(response))
+                });
+            }
+
+
+
+</script>
+</body>
+</html>

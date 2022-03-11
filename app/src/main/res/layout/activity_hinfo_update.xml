@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".InfoUpdate">
+
+    <!--<TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="#FAF09A"
+        android:layout_marginLeft="87dp"
+        android:text="사용자 정보수정"
+        android:textColor="#FF7700"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/hjoin_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FAF09A"
+        android:fontFamily="@font/binggraebold"
+        android:text="사용자 정보수정"
+        android:textAlignment="center"
+        android:textColor="#FF7700"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/hjoin_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/hjoin_id"
+            android:layout_width="92dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="45dp"
+            android:hint="아이디"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="#FF7700"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toStartOf="@+id/hjoin_name"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="117dp" />
+
+        <TextView
+            android:id="@+id/hjoin_name"
+            android:layout_width="92dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="95dp"
+            android:hint="이름"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="#FF7700"
+            android:textSize="25dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="224dp"
+            tools:layout_editor_absoluteY="117dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--<TextView
+            android:id="@+id/textView7"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="#FAF09A"
+            android:text="비밀번호"
+            android:textAlignment="center"
+            android:textColor="#FF7700"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/hjoin_password"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="168dp" />
+
+        <EditText
+            android:id="@+id/hjoin_password"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@+id/hjoin_id"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="135dp" />-->
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="비밀번호"
+            app:layout_constraintEnd_toStartOf="@+id/hjoin_password"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="168dp" />
+
+        <EditText
+            android:id="@+id/hjoin_password"
+            android:padding="16dp"
+            android:background="#eeeeee"
+            android:ems="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@+id/hjoin_id"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="135dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--<TextView
+            android:id="@+id/textView9"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="#FAF09A"
+            android:text="비밀번호 확인"
+            android:textAlignment="center"
+            android:textColor="#FF7700"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/hjoin_pwck"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="221dp" />
+
+        <EditText
+            android:id="@+id/hjoin_pwck"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="비밀번호 확인"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@+id/hjoin_password"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="135dp" />-->
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="비밀번호 확인"
+            app:layout_constraintEnd_toStartOf="@+id/hjoin_pwck"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="221dp" />
+
+        <EditText
+            android:id="@+id/hjoin_pwck"
+            android:padding="16dp"
+            android:background="#eeeeee"
+            android:ems="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="비밀번호 확인"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@+id/hjoin_password"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="135dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--<TextView
+            android:id="@+id/textView8"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:background="#FAF09A"
+            android:text="이메일"
+            android:textAlignment="center"
+            android:textColor="#FF7700"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/hjoin_email"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="278dp" />
+
+        <EditText
+            android:id="@+id/hjoin_email"
+            android:layout_width="255dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:hint="이메일"
+            android:inputType="textEmailAddress"
+            app:layout_constraintTop_toBottomOf="@+id/hjoin_pwck"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="135dp" />-->
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="이메일"
+            app:layout_constraintEnd_toStartOf="@+id/hjoin_email"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="278dp" />
+
+        <EditText
+            android:id="@+id/hjoin_email"
+            android:padding="16dp"
+            android:background="#eeeeee"
+            android:ems="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="이메일"
+            android:inputType="textEmailAddress"
+            app:layout_constraintTop_toBottomOf="@+id/hjoin_pwck"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="135dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+       <!-- <TextView
+            android:id="@+id/textView10"
+            android:layout_width="86dp"
+            android:layout_height="21dp"
+            android:layout_marginEnd="20dp"
+            android:background="#FAF09A"
+            android:text="나이대"
+            android:textAlignment="center"
+            android:textColor="#FF7700"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/hjoin_age"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="336dp" />
+
+        <Spinner
+            android:id="@+id/hjoin_age"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:spinnerMode="dialog" />-->
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="나이대"
+            app:layout_constraintEnd_toStartOf="@+id/hjoin_age"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="336dp" />
+
+        <Spinner
+            android:id="@+id/hjoin_age"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:spinnerMode="dialog" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--<TextView
+            android:id="@+id/textView11"
+            android:layout_width="86dp"
+            android:layout_height="21dp"
+            android:layout_marginEnd="20dp"
+            android:background="#FAF09A"
+            android:text="휴대전화"
+            android:textAlignment="center"
+            android:textColor="#FF7700"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/hjoin_phone"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="391dp" />
+
+        <EditText
+            android:id="@+id/hjoin_phone"
+            android:layout_width="255dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:hint="휴대전화"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.671"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hjoin_age" />-->
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="휴대전화"
+            app:layout_constraintEnd_toStartOf="@+id/hjoin_phone"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="391dp" />
+
+        <EditText
+            android:id="@+id/hjoin_phone"
+            android:padding="16dp"
+            android:background="#eeeeee"
+            android:ems="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="휴대전화"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.671"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hjoin_age" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--<TextView
+            android:id="@+id/textView15"
+            android:layout_width="86dp"
+            android:layout_height="21dp"
+            android:layout_marginEnd="20dp"
+            android:background="#FAF09A"
+            android:text="은행"
+            android:textAlignment="center"
+            android:textColor="#FF7700"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/hjoin_bank"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="391dp" />
+
+        <Spinner
+            android:id="@+id/hjoin_bank"
+            android:layout_width="200dp"
+            android:layout_height="35dp"
+            android:spinnerMode="dialog" />-->
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="은행"
+            app:layout_constraintEnd_toStartOf="@+id/hjoin_bank"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="391dp" />
+
+        <Spinner
+            android:id="@+id/hjoin_bank"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:spinnerMode="dialog" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--<TextView
+            android:id="@+id/textView17"
+            android:layout_width="86dp"
+            android:layout_height="21dp"
+            android:layout_marginEnd="20dp"
+            android:background="#FAF09A"
+            android:text="계좌번호"
+            android:textAlignment="center"
+            android:textColor="#FF7700"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/hjoin_account"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="391dp" />
+
+        <EditText
+            android:id="@+id/hjoin_account"
+            android:layout_width="255dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:hint="계좌번호"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.671"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hjoin_age" />-->
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="계좌번호"
+            app:layout_constraintEnd_toStartOf="@+id/hjoin_account"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="391dp" />
+
+        <EditText
+            android:id="@+id/hjoin_account"
+            android:padding="16dp"
+            android:background="#eeeeee"
+            android:ems="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="계좌번호"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.671"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hjoin_age" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--<TextView
+            android:id="@+id/textView23"
+            android:layout_width="86dp"
+            android:layout_height="21dp"
+            android:layout_marginEnd="20dp"
+            android:background="#FAF09A"
+            android:text="자기소개"
+            android:textAlignment="center"
+            android:textColor="#FF7700"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/hjoin_account"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="391dp" />
+
+        <EditText
+            android:id="@+id/hjoin_introduce"
+            android:layout_width="255dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:hint="자기소개"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.671"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hjoin_age" />-->
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="자기소개"
+            app:layout_constraintEnd_toStartOf="@+id/hjoin_account"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="391dp" />
+
+        <EditText
+            android:id="@+id/hjoin_introduce"
+            android:padding="16dp"
+            android:background="#eeeeee"
+            android:ems="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="자기소개"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.671"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hjoin_age" />
+    </LinearLayout>
+
+
+    <!--<Button
+        android:id="@+id/update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="150dp"
+        android:background="#FAF09A"
+        android:text="확인"
+        android:textAlignment="center"
+        android:textColor="#FF7700"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/hjoin_phone"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="161dp" />-->
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:background="@drawable/radius"
+        android:textStyle="bold"
+        android:text="수정완료"
+        app:layout_constraintTop_toBottomOf="@+id/hjoin_phone"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="161dp" />
+</LinearLayout>

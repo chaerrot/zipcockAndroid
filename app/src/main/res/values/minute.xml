@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="minute_array">
+        <item>10분이내</item>
+        <item>10분~20분</item>
+        <item>20분~40분</item>
+        <item>40분~60분</item>
+        <item>60분이상</item>
+    </string-array>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+움직임없음 효과
+    : 인트로 실행시 사라지는 액티비티에 적용할 애니메이션.
+    두개의 액티비티에 애니메이션을 적용하더라도 사라지는 액티비티의
+    효과는 거의 눈에 보이지 않는다.
+-->
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromYDelta="0"
+    android:toYDelta="0"
+    android:duration="400"
+    android:interpolator="@android:anim/accelerate_interpolator">
+</translate>

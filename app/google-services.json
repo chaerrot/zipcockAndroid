@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "413917932538",
+    "firebase_url": "https://ddddd-6c7cb-default-rtdb.firebaseio.com",
+    "project_id": "ddddd-6c7cb",
+    "storage_bucket": "ddddd-6c7cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413917932538:android:ad686d0ff718b99890d243",
+        "android_client_info": {
+          "package_name": "com.kosmo.zipcock"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413917932538-5eg65119tkld88l09noo3a4acfqcm8jf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYIurqjwppIU_IURLFpcgMSxPqTEu6dN0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413917932538-5eg65119tkld88l09noo3a4acfqcm8jf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FAF09A"
+            android:textColor="#FF7700"
+            android:textSize="35sp"
+            android:paddingTop="10dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/binggraebold"
+            android:text="심부름 요청하기" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/delivery"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/delivery100"
+                android:text="배달, 장보기"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:background="#00ff0000"
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/clean"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/clean100"
+                android:text="청소, 집안일"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:background="#00ff0000"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/installation"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/installation100"
+                android:text="설치, 운반"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:background="#00ff0000"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/togeter"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/together100"
+                android:text="설치, 운반"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:background="#00ff0000"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/bug"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/bug100"
+                android:text="벌레, 쥐잡기"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:background="#00ff0000"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/role"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/role100"
+                android:text="역할대행"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:background="#00ff0000"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/lesson"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/lesson100"
+                android:text="역할대행"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:background="#00ff0000"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/etc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/etc100"
+                android:text="기타"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:background="#00ff0000"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </TableRow>
+    <!--    <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/etc100"
+            android:text="심부름 요청하기"
+            android:textAlignment="center"
+            android:textSize="20dp"
+            android:background="#00ff0000"
+            tools:ignore="SpeakableTextPresentCheck" />-->
+    </TableLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/orange"
+            android:text="심부름 요청하기"
+            android:id="@+id/request"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

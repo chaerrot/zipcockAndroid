@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--
+    어댑터 뷰의 항목 1개를 표현할 레이아웃으로 전체를 가로형으로 선언함.
+    orientation 속성이 없으면 수평방향이 디폴트이다.
+    -->
+
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="80dp"
+        android:id="@+id/mission_category"
+        android:text="기타"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:fontFamily="@font/binggrae"
+        android:drawableTop="@drawable/clean" />
+
+    <!-- 우측의 텍스트가 출력될 부분은 세로형으로 선언함. -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--심부름 상태 출력-->
+        <TextView
+            android:id="@+id/mission_status"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="50dp"
+            android:fontFamily="@font/binggrae"
+            android:text="심부름 상태"
+            android:textSize="18sp" />
+        <!--심부름 제목 출력-->
+        <TextView
+            android:id="@+id/mission_name"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:fontFamily="@font/binggraebold"
+            android:text="심부름 제목"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="22sp" />
+
+
+
+        <TextView
+            android:id="@+id/mission_num"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="50dp"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/mission_id"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="50dp"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/mission_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="50dp"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/mission_sex"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="50dp"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/mission_waypoint"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="50dp"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/mission_end"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="50dp"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/mission_mission"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="50dp"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/mission_reservation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="50dp"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/mission_time"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="50dp"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/mission_cost"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="50dp"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kosmo.zipcock">
+
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 구글맵 -->
+    <permission
+        android:name="com.kosmo.zipcock.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.kosmo.zipcock.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 여기 에러나도 구동 잘됨다 -->
+    <!-- 저장권한 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".GlobalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Zipcock"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".HMapviewMain"
+            android:exported="false" />
+        <activity
+            android:name=".MapviewMain"
+            android:exported="false" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WebViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InfoUpdate"
+            android:exported="false" />
+        <activity
+            android:name=".HInfoUpdate"
+            android:exported="false" />
+        <activity
+            android:name=".Request"
+            android:exported="false" />
+        <activity
+            android:name=".ReviewModifyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReviewViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CockListViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NoticeViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NoticeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".faqFragment"
+            android:exported="false" />
+        <activity
+            android:name=".Intro"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HelperMain"
+            android:exported="false" />
+        <activity
+            android:name=".ZipMain"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="0f59ea6fd622d1210b2b8d378ecb16d0" /> <!-- 구글맵 -->
+        <uses-library android:name="com.google.android.maps" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyD0oF5wHDUBQAqqwzo-rP8g7BMnNpggAn0" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" /> <!-- 회원가입 입장 -->
+        <activity android:name=".MemberChoice" />
+        <activity android:name=".HMemberFragment" />
+        <activity android:name=".CMemberFragment" />
+        <activity android:name=".PayFragment" />
+    </application>
+
+</manifest>

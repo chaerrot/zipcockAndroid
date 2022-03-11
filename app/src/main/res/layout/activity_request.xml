@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--  <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="50dp"
+              android:text="심부름 요청서"
+              android:textSize="20dp"
+              android:textColor="@color/black"
+              android:layout_marginBottom="30dp" />-->
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FAF09A"
+            android:fontFamily="@font/binggraebold"
+            android:text="심부름 요청하기"
+            android:textAlignment="center"
+            android:textColor="#FF7700"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="심부름 카테고리"
+                android:layout_marginLeft="15dp"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="10dp" />
+
+            <Spinner
+                android:id="@+id/category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:textSize="20dp"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:background="@drawable/text_border"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="심부름 제목"
+                android:layout_marginLeft="15dp"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="20"
+                android:ems="5"
+                android:hint="제목을 입력해 주세요(최소 5자)"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:singleLine="true"
+                android:background="@drawable/text_border"
+                />
+        </LinearLayout>
+
+        <!--  출발지 도착지 요청내역 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="심부름 장소 및 요청 내용"
+                android:textSize="20dp"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!--   출발지 도착지 주소가져오기 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="[출발지(선택)]"
+            android:background="#eeeeee"
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"
+            android:textSize="15dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <EditText
+                android:id="@+id/et_address"
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:layout_height="match_parent"
+                android:hint="출발 주소를 입력하세요(선택)"
+                android:inputType="text"
+                android:textSize="14dp"
+                android:background="@drawable/text_border"
+                android:minLines="2"
+                android:paddingLeft="5dp"/>
+
+            <Button
+                android:id="@+id/ipbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/orange"
+                android:text="주소찾기" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <!-- 요청사항 -->
+            <EditText
+                android:id="@+id/detail_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="50dp"
+                android:ems="5"
+                android:hint="상세주소를 입력해 주세요."
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:padding="12dp"
+                android:gravity="start"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/text_border" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="[도착지]"
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"
+            android:textSize="15dp"
+            android:background="#eeeeee"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp">
+
+            <EditText
+                android:id="@+id/et_address2"
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:layout_height="match_parent"
+                android:hint="도착 주소를 입력하세요(필수)"
+                android:inputType="text"
+                android:textSize="14dp"
+                android:background="@drawable/text_border"
+                android:minLines="2"
+                android:paddingLeft="5dp"/>
+
+            <Button
+                android:id="@+id/ipbutton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/orange"
+                android:text="주소찾기" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <!-- 요청사항 -->
+            <EditText
+                android:id="@+id/detail_add2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="50dp"
+                android:ems="5"
+                android:hint="상세주소를 입력해 주세요."
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:padding="12dp"
+                android:gravity="start"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/text_border" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="gone"
+                android:id="@+id/result" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="gone"
+                android:id="@+id/result2" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="[요청내용]"
+            android:textColor="@color/black"
+            android:layout_marginLeft="15dp"
+            android:textSize="15dp"
+            android:background="#eeeeee"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <!-- 요청사항 -->
+            <EditText
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="90dp"
+                android:ems="5"
+                android:hint="요청 내용을 입력해 주세요."
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:padding="12dp"
+                android:gravity="start"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/text_border" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="참고사진"
+                android:textSize="20dp"
+                android:textColor="@color/black" />
+
+            <!-- 사진 -->
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="300dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/imageButton"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:text="사진선택"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:background="@color/orange"
+                android:onClick="BtnGetImage"/>
+        </LinearLayout>
+
+
+        <!-- 성별선택-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="선호 헬퍼 성별"
+                android:textSize="20dp"
+                android:textColor="@color/black" />
+
+            <RadioGroup
+                android:id="@+id/sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+
+                    android:id="@+id/anyone"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:textAlignment="center"
+                    android:text="상관없음"
+                    android:textSize="18dp"
+                    android:background="@drawable/radiotoggle"/>
+
+                <RadioButton
+                    android:id="@+id/man"
+                    android:layout_width="0px"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:textAlignment="center"
+                    android:text="남자"
+                    android:textSize="18dp"
+                    android:background="@drawable/radiotoggle"/>
+
+                <RadioButton
+                    android:id="@+id/woman"
+                    android:layout_width="0px"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:textAlignment="center"
+                    android:text="여자"
+                    android:textSize="18dp"
+                    android:background="@drawable/radiotoggle"/>
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+        <!-- 지금즉시, 일정예약-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="일시"
+                android:textSize="20dp"
+                android:textColor="@color/black" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/date"
+                android:orientation="horizontal"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp">
+
+                <RadioButton
+
+                    android:id="@+id/now"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:textAlignment="center"
+                    android:text="지금즉시"
+                    android:textSize="18dp"
+                    android:background="@drawable/radiotoggle"/>
+
+                <RadioButton
+                    android:id="@+id/reservation"
+                    android:layout_width="0px"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:textAlignment="center"
+                    android:text="일정 예약"
+                    android:textSize="18dp"
+                    android:onClick="datePicker"
+                    android:background="@drawable/radiotoggle"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+        <!--  예상 소요시간  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="예상 소요 시간"
+                android:textSize="20dp"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="10dp">
+
+                <Spinner
+                    android:id="@+id/minute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="20dp"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/text_border"
+                    android:spinnerMode="dialog">
+                </Spinner>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--  심부름비  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="50dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="심부름비"
+                android:textSize="20dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="20"
+                android:ems="5"
+                android:hint="0 원"
+                android:inputType="number"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:gravity="right"
+                android:background="@drawable/text_border" />
+        </LinearLayout>
+
+
+        <!--  심부름 등록  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+            <Button
+                android:id="@+id/finish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="심부름 등록"
+                android:background="@color/orange"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

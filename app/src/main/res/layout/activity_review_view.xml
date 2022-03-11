@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoticeViewActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Review"
+        android:background="#FAF09A"
+        android:textAlignment="center"
+        android:fontFamily="@font/binggraebold"
+        android:textColor="#FF7700"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.047"
+        tools:layout_editor_absoluteX="1dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="ID"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.047"
+                tools:layout_editor_absoluteX="1dp" />
+
+            <TextView
+                android:id="@+id/RevId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="ID"
+                android:textSize="20sp"
+                android:background="#eeeeee"
+                android:layout_weight="1"
+                tools:layout_editor_absoluteX="91dp"
+                tools:layout_editor_absoluteY="32dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="평점"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.047"
+                tools:layout_editor_absoluteX="1dp" />
+
+
+            <RatingBar
+                android:id="@+id/RevPo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:paddingTop="5dp"
+                android:stepSize="1" />
+
+           <!-- <TextView
+                android:id="@+id/RevPo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="POINT"
+                android:textSize="20sp"
+                android:background="#eeeeee"
+                android:layout_weight="1"
+                tools:layout_editor_absoluteX="91dp"
+                tools:layout_editor_absoluteY="32dp" />-->
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/RevIdx"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="num"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="91dp"
+            tools:layout_editor_absoluteY="32dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/Delete"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:background="@drawable/radius"
+                android:text="삭제" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="   "/>
+
+            <Button
+                android:id="@+id/Modify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/radius"
+                android:text="수정"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/RevCon"
+            android:layout_width="match_parent"
+            android:layout_height="430dp"
+            android:background="#eeeeee"
+            android:padding="16dp"
+            android:text="CONTENT"
+            android:textSize="20sp"
+            tools:layout_editor_absoluteX="91dp"
+            tools:layout_editor_absoluteY="32dp" />
+    </LinearLayout>
+</LinearLayout>

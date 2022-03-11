@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category_array" >
+        <item>배달, 장보기</item>
+        <item>청소, 집안일</item>
+        <item>설치, 운반</item>
+        <item>동행, 돌봄</item>
+        <item>벌레, 쥐잡기</item>
+        <item>역할대행</item>
+        <item>과외, 알바</item>
+        <item>기타</item>
+    </string-array>
+</resources>
